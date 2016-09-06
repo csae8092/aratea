@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="templates:surround?with=templates/page.html&amp;at=content">
+    <script src="$app-root/resources/js/tablesorter/js/jquery.tablesorter.js"/>
+    <script src="$app-root/resources/js/tablesorter/js/jquery.tablesorter.widgets.js"/><!--pager plugin-->
+    <script src="$app-root/resources/js/tablesorter/js/jquery.tablesorter.pager.js"/>
+    <script> $(function() { $("table").tablesorter({ theme : "bootstrap", widthFixed: false,
+        headerTemplate : '{content} {icon}', widgets : [ "uitheme", "zebra" ], }) }); 
+    </script>
+    <div>
+        <form method="post" class="form-inline" id="pageform">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"/>
+                    </div>
+                    <input type="text" class="form-control" name="searchexpr"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Go!</button>
+            </div>
+        </form>
+    </div>
+    <h1>Searched for<span data-template="analyze:return_searchexpression"/>
+    </h1><!--    <div data-template="app:returnVariables"/>-->
+    <table>
+        <thead>
+            <tr>
+                <th>score</th>
+                <th>KWIC</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-template="analyze:ft_search"/>
+        </tbody>
+    </table>
+</div>

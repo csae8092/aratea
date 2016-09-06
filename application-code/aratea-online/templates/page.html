@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title data-template="config:app-title">App Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta data-template="config:app-meta"/>
+        <link rel="shortcut icon" href="$shared/resources/images/exist_icon_16x16.ico"/>
+        <link rel="stylesheet" type="text/css" href="$app-root/resources/css/bootstrap-3.0.3.min.css"/>
+        <link rel="stylesheet" type="text/css" href="$app-root/resources/css/style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="$app-root/resources/js/tablesorter/css/theme.bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="$app-root/resources/js/tablesorter/css/jquery.tablesorter.pager.css"/>
+        <script type="text/javascript" src="$app-root/resources/js/jquery/jquery-2.2.1.min.js"/>
+    </head>
+    <body id="body">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"/>
+                    <span class="icon-bar"/>
+                    <span class="icon-bar"/>
+                </button>
+                <a data-template="config:app-title" class="navbar-brand" href="$app-root-href/index.html">App Title</a>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" id="about">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Exploration</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="$app-root-href/pages/toc.html">Table of Content</a>
+                            </li>
+                            <li>
+                                <a href="$app-root-href/pages/ft_search.html">Fulltext Search</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content" class="container"/>
+        <div id="loadModal"/>
+        <script>
+            $(document).ready(function(){
+            var trigger = $('a[data-type]');
+            $(trigger).click(function(){
+                var dataType = $( this ).attr('data-type');
+                var dataKey = $( this ).attr('data-key');
+                var xsl = dataType.replace("xml", "xsl");
+                var baseUrl = "showNoTemplate.html?directory=indices&amp;document="
+                var url = baseUrl+dataType+"&amp;stylesheet="+xsl+"&amp;entiyID="+dataKey;
+                console.log([baseUrl, dataKey, dataType]);
+                console.log(url);
+            $('#loadModal').load(url, function(){
+            $('#myModal').modal('show');
+            });
+            });
+            });
+        </script>
+        <script type="text/javascript">
+            $(window).load(function(){
+            $('#myModal').modal('show');
+            });
+        </script>
+        <script type="text/javascript" src="$shared/resources/scripts/loadsource.js"/>
+        <script type="text/javascript" src="$app-root/resources/js/bootstrap-3.0.3.min.js"/>
+    </body>
+</html>

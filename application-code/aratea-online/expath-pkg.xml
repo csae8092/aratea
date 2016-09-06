@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://expath.org/ns/pkg" name="http://www.digital-archiv.at/app/aratea-online" abbrev="aratea-online" version="0.1" spec="1.0">
+    <title> Digital edition of the Aratus Latinus</title>
+</package>

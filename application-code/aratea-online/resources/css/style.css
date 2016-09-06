@@ -1,0 +1,12 @@
+/* Application styles could go here */
+/* 2016-06-25 Dario Kampkaspar */
+@media (min-width: 992px) {
+    .affix {
+        position: fixed;
+    }
+}
+@media (max-width: 992px) {
+    .affix {
+        position: static;
+    }
+}

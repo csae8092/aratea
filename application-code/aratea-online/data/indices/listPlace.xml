@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>List of places</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listPlace>
+                <place xml:id="antwerp">
+                    <placeName ref="http://www.geonames.org/2803138">Antwerp</placeName>
+                </place>
+                <place xml:id="bamberg">
+                    <placeName ref="http://www.geonames.org/2952984">Bamberg</placeName>
+                </place>
+                <place xml:id="corbie">
+                    <placeName ref="http://www.geonames.org/3023742">Corbie</placeName>
+                </place>
+                <place xml:id="fleury">
+                    <placeName ref="http://www.geonames.org/3018295">Fleury</placeName>
+                </place>
+                <place xml:id="fulda">
+                    <placeName ref="http://www.geonames.org/2923822">Fulda</placeName>
+                </place>
+                <place xml:id="kues">
+                    <placeName ref="http://www.geonames.org/2949998">Kues</placeName>
+                </place>
+                <place xml:id="le_puy_en_velay">
+                    <placeName ref="http://www.geonames.org/3002465">Le Puy-en-Velay</placeName>
+                </place>
+                <place xml:id="limoges">
+                    <placeName ref="http://www.geonames.org/2998285">Limoges area</placeName>
+                </place>
+                <place xml:id="pruefening">
+                    <placeName ref="http://www.geonames.org/8378675">Prüfening</placeName>
+                </place>
+                <place xml:id="regensburg">
+                    <placeName ref="http://www.geonames.org/2849483">Regensburg</placeName>
+                </place>
+                <place xml:id="reims">
+                    <placeName ref="http://www.geonames.org/2984114">Reims</placeName>
+                </place>
+                <place xml:id="st_gall">
+                    <placeName ref="http://www.geonames.org/2658822">St. Gall</placeName>
+                </place>
+                <place xml:id="strasbourg">
+                    <placeName xml:id="gnd_4057878-1" ref="http://www.geonames.org/2973783">Strasbourg</placeName>
+                </place>
+                <place xml:id="trier">
+                    <placeName ref="http://www.geonames.org/2821164">Trier</placeName>
+                </place>
+            </listPlace>
+        </body>
+    </text>
+</TEI>

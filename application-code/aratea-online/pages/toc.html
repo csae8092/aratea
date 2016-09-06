@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <script src="$app-root/resources/js/tablesorter/js/jquery.tablesorter.js"/>
+    <script src="$app-root/resources/js/tablesorter/js/jquery.tablesorter.widgets.js"/><!--pager plugin-->
+    <script src="$app-root/resources/js/tablesorter/js/jquery.tablesorter.pager.js"/>
+    <script> $(function() { $("table").tablesorter({ theme : "bootstrap", widthFixed: false,
+        headerTemplate : '{content} {icon}', widgets : [ "uitheme", "zebra" ], }) }); 
+    </script>
+    <div class="panel panel-default">
+        <div class="panel-heading" style="text-align: center;">
+            <h1>Table of Content</h1>
+        </div>
+        <div class="panel panel-body">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="klickMe" style="text-align: center;">
+                    <h2>Digital editions</h2>
+                </div>
+                <div class="panel panel-body" id="hideMe">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Identifier <br/>
+                                    <small>place | library | shelfmark</small>
+                                </th>
+                                <th>Content</th>
+                                <th>Author</th>
+                                <th>Work</th>
+                                <th>Origin Place</th>
+                                <th>Provenance</th>
+                                <th>Century</th>
+                                <th>filename</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-template="app:toc"/>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" style="text-align: center;">
+                <h2>Manuscript Descriptions</h2>
+            </div>
+            <div class="panel panel-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Identifier <br/>
+                                <small>place | library | shelfmark</small>
+                            </th>
+                            <th>Content</th>
+                            <th>filename</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-template="app:tocMsDesc"/>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

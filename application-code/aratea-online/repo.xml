@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>The Aratea Online Project focuses on the manuscript transmission of the Aratea texts (translations and excerpted versions based on the didactic poem Phaenomena of Aratus of Soli). The project has two main objectives. First, it aims to describe all pre-13th c. manuscripts of the texts according to TEI. Thus, the user is able to search within the collection using queries. Second, a digital edition, based on transcriptions of all witnesses of two texts – the Aratus Latinus and the Revised Aratus Latinus , is planned to substitute the old edition of these text in Maass, Commentariorum in Aratum reliquiae (Berlin: Weidmann, 1898).</description>
+    <author>Ivana Dobcheva</author>
+    <author>Peter Andorfer</author>
+    <website>http://www.digital-archiv.at</website>
+    <status>alpha</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>aratea-online</target>
+    <prepare>pre-install.xql</prepare>
+    <finish>post-install.xql</finish>
+    <permissions user="csae8092" group="aratea" mode="rw-rw-r--"/>
+    <deployed>2016-09-06T14:22:56.247+02:00</deployed>
+</meta>
